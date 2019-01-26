@@ -1,8 +1,9 @@
-The sharpness values are slightly different due to round methods.
 
-First I have applied namespace ‘engineering’ to hold the class image and I abstracted and encapsulated the data attributes and methods as follows: string file, boost::multi_array input, boost::multi_array output, int sharp. And public methods: void save(string filename), and a default void save(), void Convolution(), void BoxBlur(int kernelSize), and unsigned int Sharpness().
+Appling namespace ‘engineering’ to hold the class image, abstracted and encapsulated the data attributes and methods as follows: string file, boost::multi_array input, boost::multi_array output, int sharp. And public methods: void save(string filename), and a default void save(), void Convolution(), void BoxBlur(int kernelSize), and unsigned int Sharpness().
 
-In image.cpp, I first initialized the image class with data attributes file,input, output and sharp, and then wrote a new save method that takes in an argument,filename and a default one with no arguments and writes out the ‘blurred image’.
+In image.cpp, 
+
+Initialized the image class with data attributes file,input, output and sharp, and then wrote a new save method that takes in an argument,filename and a default one with no arguments and writes out the ‘blurred image’.
 
 In my Convolution method, I first got the size, height and width of the input picture. Then I wrote a while loop to compute each pixel in the range, I also checked if the row_range or the col_range gets out of the height and the width boundary. Then I accumulated the weighted pixel values. Meanwhile I clamped the values in the range of [0,255] if the values is larger than 255 or less than 0, and put the newly computed pixel value into the output boost multi-array. Also, I got the rounded max sharpness values and stored it in the data attributes.
 
