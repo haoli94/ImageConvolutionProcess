@@ -24,4 +24,7 @@ And also I think we can deﬁne certain methods that we are going to use repeate
 
 
 ![image](https://github.com/haoli94/ImageConvolutionProcess/blob/master/Convolution.png)
+
+![image](https://github.com/haoli94/Android-apps/blob/master/UI1.png)
+
 The kernel matrix for blurring, using the denominator(1/(k*k)).
